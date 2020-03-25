@@ -17,10 +17,10 @@ jobs:
           name: Save test results
           command: |
             mkdir -p ~/cucumber
-            bundle exec cucumber --format html --out=results/report.html --format junit --out ~/cucumber/junit.xml
+            bundle exec cucumber --format html --out=results/report.html --format junit --out ~/results/junit.xml
           when: always
       - store_test_results:
-          path: ~/cucumber
+          path: ~/results
       - store_artifacts:
-          path: ~/cucumber
+          path: ~/results
  
