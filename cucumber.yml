@@ -5,7 +5,7 @@ default: -p pretty -p html -p desktop -p hmg
 pretty: --format pretty
 ci:  --format progress
 
-html:  --format html --out=results/report.html
+html:  --format html --out=results/report.html --format junit --out ~/cucumber/junit.xml
 json:  --format json --out=results/report.json
 
 hmg:  ENVIRONMENT_TYPE=hmg
