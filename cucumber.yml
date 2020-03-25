@@ -1,0 +1,16 @@
+## YAML Templatesss
+---
+default: -p pretty -p html -p desktop -p hmg
+
+pretty: --format pretty
+ci:  --format progress
+
+html:  --format html --out=results/report.html
+json:  --format json --out=results/report.json
+
+hmg:  ENVIRONMENT_TYPE=hmg
+dev:  ENVIRONMENT_TYPE=dev
+
+desktop:  DEVICE=chrome_desktop
+desktop_no_headless:  DEVICE=no_headless
+iphone8: DEVICE=chrome_iphone
